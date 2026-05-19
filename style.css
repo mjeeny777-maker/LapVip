@@ -1,0 +1,236 @@
+/* переменные */
+:root{
+    --chern: hsl(0, 0%, 0%);
+    --gray: #949494;
+}
+.tsubasa{
+    padding-top: 15px;   
+    padding-bottom: 30px;
+}
+.tsubasa__container{
+    max-width: 1000px;
+    margin-inline: auto;
+}
+.tsubasa__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tsubasa__list{
+    display: flex;
+    gap: 50px;
+    
+}
+.tsubasa__list-item{
+    color: var(--gray);
+    transition: color 0.3s;
+
+}
+a {
+    text-decoration: none;
+    
+}
+ul{
+    list-style: none;
+}
+body{
+    font-family: "Ubuntu Mono", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.5px;
+    color: var(--gray);
+    background-color: #1c294d;
+}
+.tsubasa__list-item:hover{
+    color: var(--chern);
+}
+button {
+    color: var(--gray);
+    background: transparent;
+    border: 1px solid var(--gray);
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: inherit;
+    transition: color 0.3s;
+
+}
+button:hover {
+    color: var(--chern);
+    border-color: var(--chern);
+}
+/* ВОТ ТУТ НАЧАЛО ГЕРОЯ*/
+.hero {
+    margin: 40px 0;
+}
+.hero__container {
+    max-width: 700px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    border-radius: 24px;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+/* Картинка */
+.hero__container img {
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.hero__container img:hover {
+    transform: scale(1.02);
+}
+
+/* Текстовый блок */
+.hero__text {
+    flex: 1;
+}
+
+/* Заголовок */
+.hero__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    background: linear-gradient(135deg, #fff, #ff6b6b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: -0.5px;
+}
+
+/* Описание */
+.hero__desk {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0 0 30px 0;
+    
+}
+
+/* кнопка красившая */
+.hero__button {
+    display: inline-block;
+    padding:12px 15px;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.hero__button:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+}
+
+/* це для телефонов */
+@media (max-width: 768px) {
+    .hero__container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .hero__title {
+        font-size: 32px;
+    }
+    
+    .hero__container img {
+        width: 200px;
+    }
+}
+/* ФУТЕР блин */
+.footer {
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    color: #b0b0b0;
+    margin-top: 60px;
+    padding: 50px 0 0 0;
+}
+
+.footer__container {
+    max-width: 1000px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer__col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer__title {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer__title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #ff6b6b;
+}
+
+.footer__text {
+    line-height: 1.6;
+}
+
+.footer__list,
+.footer__social,
+.footer__apps {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__list li,
+.footer__social li,
+.footer__apps li {
+    margin-bottom: 10px;
+}
+
+.footer__social a,
+.footer__apps a {
+    color: #b0b0b0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+/* полосочка снизу */
+.footer__bottom {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: 14px;
+}
+
+/* Вот для телефона */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer__title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
